@@ -101,7 +101,7 @@ function updateUi(movies) {
 }
 
 function getMovies(input) {
-  return fetch("http://www.omdbapi.com/?apikey=7df368ab&s=" + input)
+  return fetch("https://www.omdbapi.com/?apikey=7df368ab&s=" + input)
     .then((m) => {
       if (!m.ok) {
         throw new Error(m.statusText);
@@ -130,7 +130,7 @@ function updateModal(movie) {
   modalBody.innerHTML = modal;
 }
 function getModal(id) {
-  return fetch("http://www.omdbapi.com/?apikey=7df368ab&i=" + id)
+  return fetch("https://www.omdbapi.com/?apikey=7df368ab&i=" + id)
     .then((movie) => movie.json())
     .then((movie) => movie);
 }
